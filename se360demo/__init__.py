@@ -1,23 +1,26 @@
 import requests
 import os
 import matplotlib.pyplot as plt
-import html
 from datetime import datetime, timedelta
+import html
 import csv
 
+_PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
+def get_data_path(path):
+    return os.path.join(_PACKAGE_ROOT, 'data', path)
+
 def get_rain_events_csv():
+    '''Use a local csv file for the rain event data, rather than the APIs'''
 
     flow = {}
     precip = {}
     temp = {}
-    with open('raw.csv', newline='') as csvfile:
+    with open(get_data('rain_events.csv'), newline='') as csvfile:
         spamreader = csv.reader(csvfile, delimiter=',', quotechar='"')
         for row in spamreader:
             if not row[0] or row[0] == 'date':
                 continue
             key = datetime.strptime(row[0], '%Y-%m-%d')
-            if key.year != 2015:
-                continue
             precip[key] = float(row[1])
             temp[key] = float(row[2])
             flow[key] = float(row[3])
@@ -49,19 +52,26 @@ def get_rain_events_csv():
         event['max_flow'] = event['min_flow']
         event['avg_temp'] = 0
         days = int((next_day - prev_day).days)
+        days_with_data = days
         for day in (prev_day + timedelta(n) for n in range(days)):
-            if flow[day] > event['max_flow']:
+            if day in flow.keys() and flow[day] > event['max_flow']:
                 event['max_flow'] = flow[day]
-            event['avg_temp'] += temp[day]
-        event['avg_temp'] = float(event['avg_temp']) / days
+            if day in temp.keys():
+                event['avg_temp'] += temp[day]
+            else:
+                days_with_data -= 1
+        event['avg_temp'] = float(event['avg_temp']) / days_with_data
         event['flow_delta'] = event['max_flow'] - event['min_flow']
     return rain_events, flow, precip, temp
 
 def get_rain_events(year):
+    '''Fetches precipitation and water flow data from NOAA and USGS. Accumulates
+    consecutive precip days from MSP into "rain events" and matches them up with
+    an increase in the flow of Rice Creek'''
 
     site_id = '05288580' # rice creek USGS site number
     r = requests.get(
-        "https://waterservices.usgs.gov/nwis/dv/?format=json&sites={site_id}&startDT={year}-06-15&endDT={year}-09-30&siteStatus=all".format(
+        "https://waterservices.usgs.gov/nwis/dv/?format=json&sites={site_id}&startDT={year}-06-15&endDT={year}-10-31&siteStatus=all".format(
             site_id=site_id,
             year=year,
         )
@@ -80,7 +90,7 @@ def get_rain_events(year):
     # generate at https://www.ncdc.noaa.gov/cdo-web/token
     token = os.environ['NOAA_TOKEN']
     noaa_station_id = 'GHCND:USW00014922' # MSP
-    url = "https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&datatypeid=PRCP&datatypeid=TMAX&limit=1000&stationid={station}&startdate={year}-06-15&enddate={year}-09-30".format(
+    url = "https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&datatypeid=PRCP&datatypeid=TMAX&limit=1000&stationid={station}&startdate={year}-06-15&enddate={year}-10-31".format(
         station=noaa_station_id,
         year=year,
     )
@@ -140,68 +150,50 @@ def get_rain_events(year):
         event['max_flow'] = event['min_flow']
         event['avg_temp'] = 0
         days = int((next_day - prev_day).days)
+        days_with_data = days
         for day in (prev_day + timedelta(n) for n in range(days)):
-            if flow[day] > event['max_flow']:
+            if day in flow.keys() and flow[day] > event['max_flow']:
                 event['max_flow'] = flow[day]
-            event['avg_temp'] += temp[day]
-        event['avg_temp'] = float(event['avg_temp']) / days
+            if day in temp.keys():
+                event['avg_temp'] += temp[day]
+            else:
+                days_with_data -= 1
+        event['avg_temp'] = float(event['avg_temp']) / days_with_data
         event['flow_delta'] = event['max_flow'] - event['min_flow']
+
     return rain_events, flow, precip, temp
 
-#rain_events = {}
-#flow = {}
-#precip = {}
-#temp = {}
-#for year in range(2011, 2022):
-#    re, f, p, t = get_rain_events(year)
-#    rain_events.update(re)
-#    flow.update(f)
-#    precip.update(p)
-#    temp.update(t)
-rain_events, flow, precip, temp = get_rain_events_csv()
+def plot_raw_data(flow, precip, temp):
+    dates = [ d.strftime('%Y-%m-%d') for d in flow.keys() ]
 
-with open('eggs.csv', 'w', newline='') as csvfile:
-    spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    spamwriter.writerow(['start date', 'total precip', 'avg high temp', 'flow delta'])
-    spamwriter.writerow(['', 'in', 'f', 'ft^3/s'])
-    for event in rain_events.values():
-        spamwriter.writerow(['="{}"'.format(event['start_date'].strftime('%Y-%m-%d')), event['total_precip'], event['avg_temp'], event['flow_delta']])
+    plt.style.use('seaborn-whitegrid')
+    plt.set_loglevel('WARNING')
+    fig, ax = plt.subplots()
+    fig.subplots_adjust(right=0.75)
 
-#with open('raw.csv', 'w', newline='') as csvfile:
-#    spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-#    spamwriter.writerow(['date', 'precip', 'high temp', 'flow'])
-#    spamwriter.writerow(['', 'in', 'f', 'ft^3/s'])
-#    for k in flow.keys():
-#        spamwriter.writerow([k.strftime('%Y-%m-%d'), precip[k], temp[k], flow[k]])
+    ax.plot(dates, flow.values(), alpha=0.6)
+    ax.set_xticks(ax.get_xticks()[::14])
+    ax.tick_params(axis='y', labelcolor='blue')
+    ax.set_ylabel('Streamflow, ft^3/s', color='blue')
+    ax.grid(False)
 
-dates = [ d.strftime('%Y-%m-%d') for d in flow.keys() ]
+    plt.xticks(rotation=45)
+    plt.xlabel('date')
 
-plt.style.use('seaborn-whitegrid')
-fig, ax = plt.subplots()
-fig.subplots_adjust(right=0.75)
+    ax2 = ax.twinx()
+    ax2.plot(dates, precip.values(), color='green', alpha=0.6)
+    ax2.set_xticks(ax2.get_xticks()[::14])
+    ax2.grid(False)
+    ax2.tick_params(axis='y', labelcolor='green')
+    ax2.set_ylabel('Precipitation, in.', color='green')
 
-ax.plot(dates, flow.values(), alpha=0.6)
-ax.set_xticks(ax.get_xticks()[::14])
-ax.tick_params(axis='y', labelcolor='blue')
-ax.set_ylabel('Streamflow, ft^3/s', color='blue')
-ax.grid(False)
+    ax3 = ax.twinx()
+    ax3.spines.right.set_position(("axes", 1.2))
+    ax3.plot(dates, temp.values(), color='orange', alpha=0.6)
+    ax3.tick_params(axis='y', labelcolor='orange')
+    ax3.set_ylabel('Temp, f', color='orange')
+    ax3.set_xticks(ax3.get_xticks()[::14])
+    # freezing temp line, not applicable unless the date ranges go beyond summer months
+    # ax3.axhline(y=32, color='red', linestyle='--', alpha=0.6)
 
-plt.xticks(rotation=45)
-plt.xlabel('date')
-
-ax2 = ax.twinx()
-ax2.plot(dates, precip.values(), color='green', alpha=0.6)
-ax2.set_xticks(ax2.get_xticks()[::14])
-ax2.grid(False)
-ax2.tick_params(axis='y', labelcolor='green')
-ax2.set_ylabel('Precipitation, in.', color='green')
-
-ax3 = ax.twinx()
-ax3.spines.right.set_position(("axes", 1.2))
-ax3.plot(dates, temp.values(), color='orange', alpha=0.6)
-ax3.tick_params(axis='y', labelcolor='orange')
-ax3.set_ylabel('Temp, f', color='orange')
-ax3.set_xticks(ax3.get_xticks()[::14])
-# ax3.axhline(y=32, color='red', linestyle='--', alpha=0.6)
-
-plt.show()
+    plt.show()
