@@ -22,6 +22,7 @@ def fit(estimation_set, prediction_set, analysis_name):
         prediction_points.append([ a_fac.values[r], b_fac.values[r] ])
         prediction_observed.append(response.values[r])
 
+    se_conn.set_row_status(estimation_set, RowStatus.NORMAL)
     se_conn.set_row_status(prediction_set, RowStatus.IGNORED)
 
     estimate_analysis = se_conn.create_analysis('Delivery Time, y', analysis_name)

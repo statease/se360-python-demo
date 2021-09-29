@@ -34,3 +34,11 @@ Vining (2012) on "data splitting" or cross validation. The data are first
 segmented and evaluated according to the textbook. The data are then split into
 4 segments for a k-fold cross validation. Each split is evaluated and the
 results are plotted in a bar chart.
+
+## Simulated Cross Validation
+
+This example uses the `examples\sim_cv.py` script.
+
+This uses two data sets that both have simulated responses. The script compares
+two analyses of each response using cross validation. One analysis is done using
+Ordinary Least Squares and the other using a Gaussian Process Model.
