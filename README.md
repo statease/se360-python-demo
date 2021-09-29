@@ -37,8 +37,16 @@ results are plotted in a bar chart.
 
 ## Simulated Cross Validation
 
-This example uses the `examples\sim_cv.py` script.
+This example uses the `examples\sim-cv.py` script.
 
 This uses two data sets that both have simulated responses. The script compares
 two analyses of each response using cross validation. One analysis is done using
 Ordinary Least Squares and the other using a Gaussian Process Model.
+
+## Streamflow Cross Validation
+
+This example uses the `examples\streamflow-cv.py` script.
+
+This does a time-based cross validation on the streamflow data. It divides the
+data up into years for one cross validation, then does another cross validation
+based on the month of the year. The results are output to the console.
