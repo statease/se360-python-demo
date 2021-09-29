@@ -1,0 +1,287 @@
+<!DOCTYPE DEXXMLDoc SYSTEM "DEXXMLDoc.DTD">
+<DEXXMLDoc name="delivery-time.dxpx" creator="DX13" version="13.1.0.3">
+<designInfo studyType="ResponseSurface" studySubType="Randomized" designType="Dummy" noOfRuns="40" noOfFactors="2" noOfResponses="1" noOfAnalyses="1">
+<designNotes>From XML document, delivery-time.dxpx, created by DX13</designNotes>
+</designInfo>
+<blockInfo>
+<block code="0" name="Block 1"/>
+</blockInfo>
+<factorInfo>
+<factor id="A" name="Number of Cases, x1" unit="" type="Numeric" uuid="e7b96252-4ec1-425b-a765-94ad220b69fb">
+<numeric format="General" low="1" high="32" stdDev="0"/>
+</factor>
+<factor id="B" name="Distance, x2" unit="ft" type="Numeric" uuid="b888fa31-2ca0-4da2-99d6-df7b597b0c05">
+<numeric format="General" low="36" high="1530" stdDev="0"/>
+</factor>
+</factorInfo>
+<constraintInfo/>
+<responseInfo>
+<response id="1" name="Delivery Time, y" unit="min" type="Normal" format="General" responseUuId="46562158-eb83-4090-9733-bd097ba778b1"/>
+</responseInfo>
+<guiState>
+<designLayout>
+<visibleColumns>
+<column type="runorder">
+<width>35</width>
+</column>
+<column type="notes">
+<width>63</width>
+</column>
+<column id="A" type="factor">
+<width>125</width>
+</column>
+<column id="B" type="factor">
+<width>77</width>
+</column>
+<column id="1" type="response">
+<width>88</width>
+</column>
+</visibleColumns>
+</designLayout>
+<graphSettings>
+<graphArea name="EffectsNoRestriction" graph="0"/>
+<graphArea name="EffectsNoRestriction" graph="1"/>
+<graphArea name="EffectsNoRestriction" graph="2"/>
+</graphSettings>
+<perspectives>
+<report name="diagnostics_notebook_Delivery Time, y" width="3440" height="1440">948676c0614ce0190156ba1000000002=+0|94867e70614ce0190156ba7400000003=1,*2,6|94868390614ce0190156ba7800000004=+4,5|94868dd0614ce0190156ba7c00000005=+3,7,8,9,10@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=180;besth=180;minw=180;minh=180;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=948676c0614ce0190156ba1000000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=481;besth=477;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=94867e70614ce0190156ba7400000003;caption=;state=2098172;dir=2;layer=4;row=0;pos=0;prop=100000;bestw=489;besth=477;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=94868390614ce0190156ba7800000004;caption=;state=2098172;dir=3;layer=5;row=0;pos=0;prop=100000;bestw=485;besth=485;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=94868dd0614ce0190156ba7c00000005;caption=;state=2098172;dir=3;layer=5;row=0;pos=1;prop=100000;bestw=485;besth=485;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|dock_size(2,4,0)=491|dock_size(3,5,0)=487|</report>
+<report name="diagnostics_notebook_bad_region" width="3440" height="1440">948688b0614ce617016e210500000002=*0|94868b40614ce617016e217b00000003=+1,2,6|94868390614ce617016e217e00000004=+4,5|94868620614ce617016e218000000005=+3,7,8,9,10@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=180;besth=180;minw=180;minh=180;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=948688b0614ce617016e210500000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=481;besth=477;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=94868b40614ce617016e217b00000003;caption=;state=2098172;dir=2;layer=4;row=0;pos=0;prop=100000;bestw=489;besth=477;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=94868390614ce617016e217e00000004;caption=;state=2098172;dir=3;layer=5;row=0;pos=0;prop=100000;bestw=485;besth=485;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=94868620614ce617016e218000000005;caption=;state=2098172;dir=3;layer=5;row=0;pos=1;prop=100000;bestw=485;besth=485;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|dock_size(2,4,0)=491|dock_size(3,5,0)=487|</report>
+<report name="main_frame" width="1210" height="1056">layout2|name=main_toolbar;caption=Toolbar;state=2106108;dir=1;layer=10;row=0;pos=0;prop=100000;bestw=441;besth=37;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=start_screen;caption=;state=258;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=0;besth=0;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=navigation_tree;caption=Navigation Pane;state=5628;dir=4;layer=1;row=0;pos=0;prop=100000;bestw=200;besth=600;minw=40;minh=40;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=node_view;caption=;state=4352;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=16;besth=16;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Design Tool;caption=;state=2110204;dir=1;layer=10;row=0;pos=443;prop=100000;bestw=655;besth=37;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Design Properties;caption=Design Properties;state=2098684;dir=4;layer=1;row=0;pos=1;prop=100000;bestw=200;besth=300;minw=40;minh=40;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=217;floath=340|name=History;caption=History;state=2098686;dir=2;layer=1;row=0;pos=0;prop=100000;bestw=200;besth=300;minw=40;minh=40;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=217;floath=340|dock_size(1,10,0)=39|dock_size(5,0,0)=10|dock_size(4,1,0)=200|</report>
+<report name="modelgraph_notebook_Delivery Time, y" width="1920" height="1080">7ce04510612cee36000418d700000002=*0@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=739;besth=448;minw=739;minh=448;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=7ce04510612cee36000418d700000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=1477;besth=894;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|</report>
+<report name="modelgraph_notebook_bad_region" width="3440" height="1440">94867e70614ce61b016e328e00000002=*0@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=489;besth=485;minw=489;minh=485;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=94867e70614ce61b016e328e00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=976;besth=968;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|</report>
+<report name="report_anova_Delivery Time, y" width="3440" height="1440">94868390614c8fa5001c74e200000002=+0|948688b0614c8fa5001c752a00000003=1,*2|94868dd0614c8fa5001c752f00000004=3,4,+5@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=180;besth=180;minw=180;minh=180;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=94868390614c8fa5001c74e200000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=481;besth=968;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=948688b0614c8fa5001c752a00000003;caption=;state=2098172;dir=2;layer=3;row=0;pos=0;prop=100000;bestw=489;besth=481;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=94868dd0614c8fa5001c752f00000004;caption=;state=2098172;dir=2;layer=3;row=0;pos=1;prop=100000;bestw=489;besth=481;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|dock_size(2,3,0)=491|</report>
+<report name="report_anova_bad_region" width="3440" height="1440">94868620614ce0020156612700000002=+0|94868390614ce0020156618500000003=+1,2|94867e70614ce0020156618800000004=3,*4,5@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=180;besth=180;minw=180;minh=180;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=94868620614ce0020156612700000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=481;besth=968;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=94868390614ce0020156618500000003;caption=;state=2098172;dir=2;layer=3;row=0;pos=0;prop=100000;bestw=489;besth=481;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=94867e70614ce0020156618800000004;caption=;state=2098172;dir=2;layer=3;row=0;pos=1;prop=100000;bestw=489;besth=481;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|dock_size(2,3,0)=491|</report>
+<report name="report_confirmation_" width="3440" height="1440">94868b40614c8faa001c876900000002=*0,1|94868dd0614c8faa001c87a800000003=+2@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=180;besth=180;minw=180;minh=180;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=94868b40614c8faa001c876900000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=984;besth=495;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=94868dd0614c8faa001c87a800000003;caption=;state=2098172;dir=3;layer=1;row=0;pos=0;prop=100000;bestw=984;besth=502;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|dock_size(3,1,0)=504|</report>
+<report name="report_fit_summary_Delivery Time, y" width="0" height="0"></report>
+<report name="report_fit_summary_bad_region" width="0" height="0"></report>
+</perspectives>
+</guiState>
+<designModel terms="6">
+<designTerm id="0" coef="1" term="Intercept"/>
+<designTerm id="1" coef="1" term="A"/>
+<designTerm id="2" coef="1" term="B"/>
+<designTerm id="3" coef="1" term="AB"/>
+<designTerm id="4" coef="1" term="A^2"/>
+<designTerm id="5" coef="1" term="B^2"/>
+</designModel>
+<run stdNo="1" dsnId="2" runNo="1" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">7</facActual>
+<facActual id="B">560</facActual>
+<resVal id="1">16.68</resVal>
+</run>
+<run stdNo="2" dsnId="3" runNo="2" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">3</facActual>
+<facActual id="B">220</facActual>
+<resVal id="1">11.5</resVal>
+</run>
+<run stdNo="3" dsnId="4" runNo="3" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">3</facActual>
+<facActual id="B">340</facActual>
+<resVal id="1">12.03</resVal>
+</run>
+<run stdNo="4" dsnId="5" runNo="4" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">4</facActual>
+<facActual id="B">80</facActual>
+<resVal id="1">14.88</resVal>
+</run>
+<run stdNo="5" dsnId="6" runNo="5" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">6</facActual>
+<facActual id="B">150</facActual>
+<resVal id="1">13.75</resVal>
+</run>
+<run stdNo="6" dsnId="7" runNo="6" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">7</facActual>
+<facActual id="B">330</facActual>
+<resVal id="1">18.11</resVal>
+</run>
+<run stdNo="7" dsnId="8" runNo="7" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">2</facActual>
+<facActual id="B">110</facActual>
+<resVal id="1">8</resVal>
+</run>
+<run stdNo="8" dsnId="9" runNo="8" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">7</facActual>
+<facActual id="B">210</facActual>
+<resVal id="1">17.83</resVal>
+</run>
+<run stdNo="9" dsnId="10" runNo="9" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">30</facActual>
+<facActual id="B">1460</facActual>
+<resVal id="1">79.24</resVal>
+</run>
+<run stdNo="10" dsnId="11" runNo="10" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">5</facActual>
+<facActual id="B">605</facActual>
+<resVal id="1">21.5</resVal>
+</run>
+<run stdNo="11" dsnId="12" runNo="11" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">16</facActual>
+<facActual id="B">688</facActual>
+<resVal id="1">40.33</resVal>
+</run>
+<run stdNo="12" dsnId="13" runNo="12" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">10</facActual>
+<facActual id="B">215</facActual>
+<resVal id="1">21</resVal>
+</run>
+<run stdNo="13" dsnId="14" runNo="13" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">4</facActual>
+<facActual id="B">255</facActual>
+<resVal id="1">13.5</resVal>
+</run>
+<run stdNo="14" dsnId="15" runNo="14" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">6</facActual>
+<facActual id="B">462</facActual>
+<resVal id="1">19.75</resVal>
+</run>
+<run stdNo="15" dsnId="16" runNo="15" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">9</facActual>
+<facActual id="B">448</facActual>
+<resVal id="1">24</resVal>
+</run>
+<run stdNo="16" dsnId="17" runNo="16" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">10</facActual>
+<facActual id="B">776</facActual>
+<resVal id="1">29</resVal>
+</run>
+<run stdNo="17" dsnId="18" runNo="17" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">6</facActual>
+<facActual id="B">200</facActual>
+<resVal id="1">15.35</resVal>
+</run>
+<run stdNo="18" dsnId="19" runNo="18" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">7</facActual>
+<facActual id="B">132</facActual>
+<resVal id="1">19</resVal>
+</run>
+<run stdNo="19" dsnId="20" runNo="19" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">3</facActual>
+<facActual id="B">36</facActual>
+<resVal id="1">9.5</resVal>
+</run>
+<run stdNo="20" dsnId="21" runNo="20" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">17</facActual>
+<facActual id="B">770</facActual>
+<resVal id="1">35.1</resVal>
+</run>
+<run stdNo="21" dsnId="22" runNo="21" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">10</facActual>
+<facActual id="B">140</facActual>
+<resVal id="1">17.9</resVal>
+</run>
+<run stdNo="22" dsnId="23" runNo="22" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">26</facActual>
+<facActual id="B">810</facActual>
+<resVal id="1">52.32</resVal>
+</run>
+<run stdNo="23" dsnId="24" runNo="23" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">9</facActual>
+<facActual id="B">450</facActual>
+<resVal id="1">18.75</resVal>
+</run>
+<run stdNo="24" dsnId="25" runNo="24" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">8</facActual>
+<facActual id="B">635</facActual>
+<resVal id="1">19.83</resVal>
+</run>
+<run stdNo="25" dsnId="26" runNo="25" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">4</facActual>
+<facActual id="B">150</facActual>
+<resVal id="1">10.75</resVal>
+</run>
+<run stdNo="26" dsnId="27" runNo="26" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">22</facActual>
+<facActual id="B">905</facActual>
+<resVal id="1">51</resVal>
+</run>
+<run stdNo="27" dsnId="28" runNo="27" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">7</facActual>
+<facActual id="B">520</facActual>
+<resVal id="1">16.8</resVal>
+</run>
+<run stdNo="28" dsnId="29" runNo="28" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">15</facActual>
+<facActual id="B">290</facActual>
+<resVal id="1">26.16</resVal>
+</run>
+<run stdNo="29" dsnId="30" runNo="29" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">5</facActual>
+<facActual id="B">500</facActual>
+<resVal id="1">19.9</resVal>
+</run>
+<run stdNo="30" dsnId="31" runNo="30" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">6</facActual>
+<facActual id="B">1000</facActual>
+<resVal id="1">24</resVal>
+</run>
+<run stdNo="31" dsnId="32" runNo="31" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="E" rowStatus="Normal">
+<facActual id="A">6</facActual>
+<facActual id="B">225</facActual>
+<resVal id="1">18.55</resVal>
+</run>
+<run stdNo="32" dsnId="33" runNo="32" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">10</facActual>
+<facActual id="B">775</facActual>
+<resVal id="1">31.93</resVal>
+</run>
+<run stdNo="33" dsnId="34" runNo="33" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">4</facActual>
+<facActual id="B">212</facActual>
+<resVal id="1">16.95</resVal>
+</run>
+<run stdNo="34" dsnId="35" runNo="34" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">1</facActual>
+<facActual id="B">144</facActual>
+<resVal id="1">7</resVal>
+</run>
+<run stdNo="35" dsnId="36" runNo="35" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">3</facActual>
+<facActual id="B">126</facActual>
+<resVal id="1">14</resVal>
+</run>
+<run stdNo="36" dsnId="37" runNo="36" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">12</facActual>
+<facActual id="B">655</facActual>
+<resVal id="1">37.03</resVal>
+</run>
+<run stdNo="37" dsnId="38" runNo="37" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">10</facActual>
+<facActual id="B">420</facActual>
+<resVal id="1">18.62</resVal>
+</run>
+<run stdNo="38" dsnId="39" runNo="38" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">7</facActual>
+<facActual id="B">150</facActual>
+<resVal id="1">16.1</resVal>
+</run>
+<run stdNo="39" dsnId="40" runNo="39" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">8</facActual>
+<facActual id="B">360</facActual>
+<resVal id="1">24.38</resVal>
+</run>
+<run stdNo="40" dsnId="41" runNo="40" blockNo="0" blockName="Block 1" pointId="255" pointName="Unknown" buildPointId="5" buildPointName="NA" note="P" rowStatus="Verification">
+<facActual id="A">32</facActual>
+<facActual id="B">1530</facActual>
+<resVal id="1">64.75</resVal>
+</run>
+<responseModel rmId="1" analysisUuId="33043919-b4b2-47eb-ac9a-84116df0881c" name="Delivery Time, y">
+<response id="1" responseUuId="46562158-eb83-4090-9733-bd097ba778b1" modelBase="Polynomial" stdDevSource="ANOVA" stdDev="Missing"/>
+<transform id="0" name="None" successLevel="1"/>
+</responseModel>
+<optimization models="4">
+<criteria modType="Factor" id="1" goal="InRange" type="Numeric" target="16.5" limitLow="1" limitHigh="32" weightLow="1" weightHigh="1" overlayLow="Missing" overlayHigh="Missing" importance="3" coding="Actual" scale="Transform" displayScale="Original"/>
+<criteria modType="Factor" id="2" goal="InRange" type="Numeric" target="783" limitLow="36" limitHigh="1530" weightLow="1" weightHigh="1" overlayLow="Missing" overlayHigh="Missing" importance="3" coding="Actual" scale="Transform" displayScale="Original"/>
+</optimization>
+<confirmationData alpha="0.05">
+<runData numRuns="1" id="1">
+<factorData>
+<codedValue>1</codedValue>
+<codedValue>1</codedValue>
+</factorData>
+<responseData responseName="Delivery Time, y">
+<responseValue/>
+</responseData>
+</runData>
+</confirmationData>
+<buildInfo rows="1" buildTime="12"/>
+</DEXXMLDoc>
