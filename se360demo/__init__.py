@@ -15,7 +15,7 @@ def get_rain_events_csv():
     flow = {}
     precip = {}
     temp = {}
-    with open(get_data('rain_events.csv'), newline='') as csvfile:
+    with open(get_data_path('rain-events.csv'), newline='') as csvfile:
         spamreader = csv.reader(csvfile, delimiter=',', quotechar='"')
         for row in spamreader:
             if not row[0] or row[0] == 'date':
@@ -164,6 +164,7 @@ def get_rain_events(year):
     return rain_events, flow, precip, temp
 
 def plot_raw_data(flow, precip, temp):
+    ''' This will plot every day's worth of streamflow data. '''
     dates = [ d.strftime('%Y-%m-%d') for d in flow.keys() ]
 
     plt.style.use('seaborn-whitegrid')
