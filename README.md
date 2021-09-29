@@ -4,6 +4,9 @@ This is a collection of a few Python programs that interact with Stat-Ease 360,
 initially demonstrated at the 2021 DOE Summit by Hank Anderson. The slides
 from that talk are included in this repository as well.
 
+In order to use the data from this repository, you should install the `se360demo`
+Python package by running `pip install se360demo`.
+
 ## Multi-response Graph
 
 This uses the `examples\multiresponse-graph.py` script. Open Stat-Ease 360 and
