@@ -1,8 +1,12 @@
 """ Demo code for SE360 """
 
 from setuptools import setup
+from pathlib import Path
 
-VERSION = '0.1.0'
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
+
+VERSION = '0.1.2'
 DOCLINES = (__doc__ or '').split("\n")
 
 CLASSIFIERS = [
@@ -26,13 +30,14 @@ def run_setup():
         name='se360demo',
         version=VERSION,
         description=DOCLINES[0],
-        long_description="\n".join(DOCLINES[2:]),
+        long_description=long_description,
         classifiers=CLASSIFIERS,
         author='Hank Anderson',
         author_email='hank@statease.com',
         license='Other/Proprietary License',
-        url='https://statease.com/docs/se360/python-integration/',
+        url='https://github.com/statease/se360-python-demo',
         packages=['se360demo'],
+        package_data={'se360demo': [ 'data/*.dxpx', 'data/*.csv', 'examples/*.py' ] },
         install_requires=['statease', 'requests', 'matplotlib', 'numpy', 'sklearn'],
         long_description_content_type='text/markdown',
     )
